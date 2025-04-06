@@ -1,0 +1,215 @@
+name: Generate assignment and solution versions
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  generate-notebook:
+    name: Generate assignment and solution versions
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.FG_MUDE_2025_token }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          original_line=$(grep '^python == 3.12$' requirements.txt || true)
+          sed -i '/^python == 3.12$/d' requirements.txt
+          pip install -r requirements.txt
+          pip install nbformat
+          if [ -n "$original_line" ]; then
+            echo "$original_line" >> requirements.txt
+          fi
+
+      - name: Remove solution cells
+        run: |
+          python -c "
+          import os
+          import nbformat
+
+          # Walk through all files in the repository
+          for root, _, files in os.walk('.'):
+              for file in files:
+                  if file.endswith('.ipynb'):
+                      notebook_file = os.path.join(root, file)
+                      with open(notebook_file) as f:
+                          notebook = nbformat.read(f, as_version=4)
+
+                      # Remove cells tagged with 'solution'
+                      notebook.cells = [cell for cell in notebook.cells if 'solution' not in cell.metadata.get('tags', [])]
+
+                      # Save the modified notebook
+                      with open(notebook_file, 'w') as f:
+                          nbformat.write(notebook, f)
+          "
+      - name: Remove solution markdown cells
+        run: |
+          python -c "
+          import os
+          import nbformat
+
+          # Walk through all files in the repository
+          for root, _, files in os.walk('.'):
+            for file in files:
+              if file.endswith('.ipynb'):
+                notebook_file = os.path.join(root, file)
+                with open(notebook_file) as f:
+                  notebook = nbformat.read(f, as_version=4)
+
+                # Remove markdown cells containing the specific background color
+                notebook.cells = [
+                  cell for cell in notebook.cells
+                  if not (
+                    '<div style=\"background-color:#FAE99E;' in cell.source
+                  )
+                ]
+
+                # Save the modified notebook
+                with open(notebook_file, 'w') as f:
+                  nbformat.write(notebook, f)
+          "
+
+      - name: Remove solution sections from markdown files
+        run: |
+          python -c '
+          import os
+
+          # Walk through all files in the repository
+          for root, _, files in os.walk("."):
+              for file in files:
+                  if file.endswith(".md"):
+                      markdown_file = os.path.join(root, file)
+                      with open(markdown_file, "r") as f:
+                          lines = f.readlines()
+
+                      # Remove lines between "% solution_start" and "% solution_end"
+                      in_solution_block = False
+                      filtered_lines = []
+                      for line in lines:
+                          if "% solution_start" in line:
+                              in_solution_block = True
+                          elif "% solution_end" in line:
+                              in_solution_block = False
+                          elif not in_solution_block:
+                              filtered_lines.append(line)
+
+                      # Raise an error if a solution block was not properly closed
+                      if in_solution_block:
+                          raise ValueError("Unclosed % solution_start detected in file: " + markdown_file)
+
+                      # Save the modified markdown file
+                      with open(markdown_file, "w") as f:
+                          f.writelines(filtered_lines)
+          '
+
+      - name: Commit and push changes assignment version
+        env:
+          TOKEN: ${{ secrets.FG_MUDE_2025_token }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout -b assignment
+          git merge origin/main
+          git add .
+          git commit -m "Generate assignment version"
+          git push origin assignment --force
+          git rm .github/workflows/generate-student-notebook.yml
+          git add .
+          git commit -m "Remove workflow file from assignment branch"
+          git push origin assignment
+
+      - name: Restore main branch and remove 'assignment' cells
+        run: |
+          git checkout main
+          python -c "
+          import os
+          import nbformat
+
+          # Walk through all files in the repository
+          for root, _, files in os.walk('.'):
+              for file in files:
+                  if file.endswith('.ipynb'):
+                      notebook_file = os.path.join(root, file)
+                      with open(notebook_file) as f:
+                          notebook = nbformat.read(f, as_version=4)
+
+                      # Remove cells tagged with 'assignment'
+                      notebook.cells = [cell for cell in notebook.cells if 'assignment' not in cell.metadata.get('tags', [])]
+
+                      # Save the modified notebook
+                      with open(notebook_file, 'w') as f:
+                          nbformat.write(notebook, f)
+          "
+
+      - name: Run notebook files
+        run: |
+          python -c "
+          import os
+          import nbformat
+          from nbconvert.preprocessors import ExecutePreprocessor
+
+          # Walk through all files in the repository
+          for root, _, files in os.walk('.'):
+            for file in files:
+              if file.endswith('.ipynb'):
+                notebook_file = os.path.join(root, file)
+                with open(notebook_file) as f:
+                  notebook = nbformat.read(f, as_version=4)
+
+                # Execute the notebook
+                ep = ExecutePreprocessor(timeout=60, kernel_name='python3')
+                ep.preprocess(notebook, {'metadata': {'path': root}})
+
+                # Save the executed notebook
+                with open(notebook_file, 'w') as f:
+                  nbformat.write(notebook, f)
+          "
+
+      - name: Remove commented lines from markdown files
+        run: |
+          python -c '
+          import os
+
+          # Walk through all files in the repository
+          for root, _, files in os.walk("."):
+            for file in files:
+              if file.endswith(".md"):
+                markdown_file = os.path.join(root, file)
+                with open(markdown_file, "r") as f:
+                  lines = f.readlines()
+
+                # Remove lines that start with a comment symbol
+                filtered_lines = [line for line in lines if not line.strip().startswith("% solution")]
+
+                # Save the modified markdown file
+                with open(markdown_file, "w") as f:
+                  f.writelines(filtered_lines)
+          '
+
+      - name: Commit and push solution version
+        env:
+          TOKEN: ${{ secrets.FG_MUDE_2025_token }}
+        run: |
+          git checkout -b solution
+          git merge origin/main
+          git add .
+          git commit -m "Generate solution version"
+          git push origin solution --force
+          git rm .github/workflows/generate-student-notebook.yml
+          git add .
+          git commit -m "Remove workflow file from solution branch"
+          git push origin solution
