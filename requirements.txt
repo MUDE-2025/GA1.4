@@ -1,0 +1,7 @@
+python == 3.12
+numpy
+scipy
+pandas
+matplotlib
+jupyter
+ipykernel
