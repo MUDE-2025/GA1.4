@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+message: 'If you use this assignment, please cite it using these metadata.'
+authors:
+  - email: MUDE-CEG@tudelft.nl
+    name: 'MUDE teaching team from Delft University of Technology'
+    website: 'https://mude.citg.tudelft.nl/'
+title: 'MUDE assignment 2025-2026'
+preferred-citation:
+  type: generic
+  authors:
+  - email: MUDE-CEG@tudelft.nl
+    name: 'MUDE teaching team from Delft University of Technology'
+    website: 'https://mude.citg.tudelft.nl/'
+  url: 'https://github.com/MUDE-2025/PA1.1' 
+  title: 'MUDE assignment 2025-2026'
+  institution:
+    name: 'Delft University of Technology'
+  license: CC-BY-4.0
+  license-url: 'https://creativecommons.org/licenses/by/4.0/'
+  copyright: '© 2025 MUDE from Delft University of Technology'
+  languages:
+    - en
+  contact:
+  - email: MUDE-CEG@tudelft.nl
+    name: 'MUDE teaching team from Delft University of Technology'
