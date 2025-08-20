@@ -4,7 +4,7 @@
 
 *Written by: Max Ramgraber, Patricia Mares Nasarre, and Robert Lanzafame.*
 
-*Due: `<day of week>`, `<month>` `<day>`, `<year>`.*
+*Due: Friday, September 26th 2025.*
 
 GA 1.4 focuses on the fit and validation of a continuous parametric probability distribution to two data sets. There are **three datasets to choose from** (the analysis is exactly the same for all three!).
 

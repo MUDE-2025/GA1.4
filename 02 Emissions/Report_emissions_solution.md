@@ -1,6 +1,6 @@
-# Report for Group Assignment 1.7, Emissions Dataset
+# Report for Group Assignment 1.4, Emissions Dataset
 
-*[CEGM1000 MUDE](http://mude.citg.tudelft.nl/): Week 1.7, Friday, Oct 18, 2024.*
+*[CEGM1000 MUDE](http://mude.citg.tudelft.nl/): Week 1.4, Friday, Sept 26th, 2025.*
 
 _Remember to read the grading and submission instructions in the `README.md` file thoroughly before finalizing your answers in this document!_
 
@@ -54,4 +54,4 @@ _Use this space to let us know if you ran into any challenges while working on t
 **End of file.**
 
 <span style="font-size: 75%">
-By <a rel="MUDE" href="http://mude.citg.tudelft.nl/">MUDE Team</a> &copy; 2024 TU Delft. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. doi: <a rel="Zenodo DOI" href="https://doi.org/10.5281/zenodo.16782515">10.5281/zenodo.16782515</a>.
+*Copyright 2025 <a rel="MUDE" href="http://mude.citg.tudelft.nl/">MUDE</a>, TU Delft. This work is licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.*
