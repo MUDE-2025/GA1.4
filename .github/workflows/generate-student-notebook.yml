@@ -33,9 +33,6 @@ jobs:
           pip install nbformat nbconvert
           python -m pip install ipykernel
           python -m ipykernel install --user --name=python3
-          if [ -n "$original_line" ]; then
-            echo "$original_line" >> requirements.txt
-          fi
 
       - name: Remove solution cells
         run: |
@@ -132,8 +129,9 @@ jobs:
           else
             git commit -m "Generate assignment version"
             git rm .github/workflows/generate-student-notebook.yml
+            git rm requirements.txt
             git add .
-            git commit -m "Remove workflow file from assignment branch"
+            git commit -m "Remove requirements and workflow file from assignment branch"
             git push origin assignment --force
           fi
 
@@ -217,7 +215,8 @@ jobs:
           else
             git commit -m "Generate solution version"
             git rm .github/workflows/generate-student-notebook.yml
+            git rm requirements.txt
             git add .
-            git commit -m "Remove workflow file from solution branch"
+            git commit -m "Remove requirements and workflow file from solution branch"
             git push origin solution --force
           fi
