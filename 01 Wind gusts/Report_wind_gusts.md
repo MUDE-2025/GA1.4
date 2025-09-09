@@ -1,4 +1,4 @@
-# Report for Group Assignment 1.4, Discharge Dataset
+# Report for Group Assignment 1.4, Wind Gust Dataset
 
 *[CEGM1000 MUDE](http://mude.citg.tudelft.nl/): Week 1.4, Friday, Sept 26th, 2025.*
 
@@ -8,7 +8,7 @@ _Remember to read the grading and submission instructions in the `README.md` fil
 
 **Question 1**
 
-Give a short description of the provided dataset in statistical terms. Visualize the data and choose a parametric distribution function for each variable between the indicated ones: choose between Uniform and Gaussian distribution to model the water depth, and between Exponential and Gumbel for the velocity. Justify your choice based on the previous description and visualization. 
+Give a short description of the provided dataset in statistical terms. Visualize the data and choose a parametric distribution function for each variable between the indicated ones: choose between a lognormal and exponential distribution to model the wind speed, and between a Gaussian and beta distribution for the wave period. Justify your choice based on the previous description and visualization. 
 
 _You should describe your data with only a few sentences, and be sure to use quantitative information! Refer to that description to choose the parametric distribution function. You can also include some plots that may support your reasoning._
 
@@ -26,16 +26,15 @@ Fit and assess the goodness of fit of the selected parametric distribution funct
 
 _Remember to use quantitative information based on the goodness of fit metrics that you have used. Also, you can include some examples of the differences in the computed and observed non-exceedance probabilities._
 
-
 **Question 3**
 
-Propagate the uncertainty through the equation to estimate the discharge, $q$, using both observations and simulated samples. Provide a bulleted list that summarizes differences between the two obtained distributions.
+Propagate the uncertainty through the equation to estimate the wind gust factor, $F$, using both observations and simulated samples. Provide a bulleted list that summarizes differences between the two obtained distributions.
 
 **Question 4**
 
 Compare the simulated samples and the observations in a scatter plot, then prepare a bulleted list that describes the differences. Is there anything you could improve in the analysis? Provide with recommendations to improve the performed analysis. They can be both about the univariate distributions and about the propagation of uncertainty method you have used.
 
-_Hint: Compute the correlation coefficient between H and T for both the observations and the simulated samples._
+_Hint: Compute the correlation coefficient between v and G for both the observations and the simulated samples._
 
 _Include your figure here. Be sure to use high contrast data symbols/colors and a legend to differentiate the two data sets clearly._
 

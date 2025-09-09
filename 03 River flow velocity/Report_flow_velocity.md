@@ -1,4 +1,4 @@
-# Report for Group Assignment 1.4, Force Dataset
+# Report for Group Assignment 1.4, Flow velocity Dataset
 
 *[CEGM1000 MUDE](http://mude.citg.tudelft.nl/): Week 1.4, Friday, Sept 26th, 2025.*
 
@@ -8,7 +8,7 @@ _Remember to read the grading and submission instructions in the `README.md` fil
 
 **Question 1**
 
-Give a short description of the provided dataset in statistical terms. Visualize the data and choose a parametric distribution function for each variable between the indicated ones: choose between Exponential and Gaussian distribution to model the wave height, and between Uniform and Gumbel for the wave period. Justify your choice based on the previous description and visualization. 
+Give a short description of the provided dataset in statistical terms. Visualize the data and choose a parametric distribution function for each variable between the indicated ones: choose between lognormal and uniform distribution to model the water depth $h$, and between a Gaussian or Gumbel distribution for the flow rate $q$. Justify your choice based on the previous description and visualization. 
 
 _You should describe your data with only a few sentences, and be sure to use quantitative information! Refer to that description to choose the parametric distribution function. You can also include some plots that may support your reasoning._
 
@@ -29,7 +29,7 @@ _Remember to use quantitative information based on the goodness of fit metrics t
 
 **Question 3**
 
-Propagate the uncertainty through the equation to estimate wave forces, $F_h$, using both observations and simulated samples. Provide a bulleted list that summarizes differences between the two obtained distributions.
+Propagate the uncertainty through the equation to estimate the flow velocity, $u$, using both observations and simulated samples. Provide a bulleted list that summarizes differences between the two obtained distributions.
 
 **Question 4**
 
