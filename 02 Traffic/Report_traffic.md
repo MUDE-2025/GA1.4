@@ -69,14 +69,14 @@ Rubric: - 3 points in total
 
 **Question 3**
 
-Propagate the uncertainty through the equation to estimate the wind gust factor, $F$, using both observations and simulated samples. Provide a bulleted list that summarizes differences between the two obtained distributions.
+Propagate the uncertainty through the equation to estimate the traffic density, $D$, using both observations and simulated samples. Provide a bulleted list that summarizes differences between the two obtained distributions.
 
 - your
 - bulleted
 - list
 - here
 
-Compare the simulated samples and observations $(v,G)$ in a scatter plot, then prepare a bulleted list that describes the differences. Is there anything you could improve in the analysis? Provide with recommendations to improve the performed analysis. They can be both about the univariate distributions and about the propagation of uncertainty method you have used.
+Compare the simulated samples and observations $(F,v)$ in a scatter plot, then prepare a bulleted list that describes the differences. Is there anything you could improve in the analysis? Provide with recommendations to improve the performed analysis. They can be both about the univariate distributions and about the propagation of uncertainty method you have used.
 
 _Include your figure here. Be sure to use high contrast data symbols/colors and a legend to differentiate the two data sets clearly._
 
@@ -93,7 +93,7 @@ _Include your figure here. Be sure to use high contrast data symbols/colors and 
 
 Rubric: - 4 points in total
 
-    2 for recognizing the differences between the observed and simulated distribution for $D§ (simulated is smoother, observed has more kinks, observed has higher mode etc.); partial points for vague or unconvincing explanations
+    2 for recognizing the differences between the observed and simulated distribution for $D$ (simulated is smoother, observed has more kinks, observed has higher mode etc.); partial points for vague or unconvincing explanations
     1 point for recognizing that there is a relationship in the observations that the simulation does not capture
     1 point for making reasonable suggestions for improvements (capturing the dependency, truncating unphysical values, etc.)
     (half points for slight deviations)
