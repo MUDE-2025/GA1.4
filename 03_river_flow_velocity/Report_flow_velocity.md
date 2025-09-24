@@ -92,13 +92,12 @@ _Include your figure here. Be sure to use high contrast data symbols/colors and 
 
 % solution_start
 
-Rubric: - 4 points in total
+Rubric: - 3 points in total
 
-    1 point for recognizing the similarity between the observed and simulated distribution for $u$ (similar spread, similar mode.); partial points for vague or unconvincing explanations
-    1 point for recognizing the difference between the observed and simulated distribution for $u$ (slight deviation in the tail); partial points for vague or unconvincing explanations
+    1 point for recognizing the difference between the observed and simulated distribution for $u$ (deviations in the tail); partial points for vague or unconvincing explanations
     1 point for recognizing that there is a relationship in the observations that the simulation does not capture
     1 point for making reasonable suggestions for improvements (capturing the dependency, truncating unphysical values, etc.)
-    (half points for slight deviations)
+    (half points for slight deviations or imperfect answers)
  
 % solution_end
 **Last Question: How did things go? (Optional)**

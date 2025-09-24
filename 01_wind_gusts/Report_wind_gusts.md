@@ -91,13 +91,13 @@ _Include your figure here. Be sure to use high contrast data symbols/colors and 
 
 % solution_start
 
-Rubric: - 4 points in total
+Rubric: - 3 points in total
 
-    1 for recognizing that the simulated distribution of $F$ is much broader than the observed distribution of $F$
-    1 point for recognizing that the distribution includes unphysical values (F lower than 1, extremely high factors, etc.)
-    1 point for recognizing that there is a relationship in the observations that the simulation does not capture
+    0.5 points for recognizing that the simulated distribution of $F$ is much broader than the observed distribution of $F$
+    0.5 points for recognizing that the distribution includes unphysical values (F lower than 1, extremely high factors, etc.)
+    1 point for recognizing that there is a relationship/dependency/correlation in the observations that the simulation does not capture
     1 point for making reasonable suggestions for improvements (capturing the dependency, truncating unphysical values, etc.)
-    (half points for slight deviations)
+    (half points for slight deviations or imperfect answers)
  
 % solution_end
 
