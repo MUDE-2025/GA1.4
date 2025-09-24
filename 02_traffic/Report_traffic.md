@@ -91,12 +91,12 @@ _Include your figure here. Be sure to use high contrast data symbols/colors and 
 
 % solution_start
 
-Rubric: - 4 points in total
+Rubric: - 3 points in total
 
-    2 for recognizing the differences between the observed and simulated distribution for $D$ (simulated is smoother, observed has more kinks, observed has higher mode etc.); partial points for vague or unconvincing explanations
+    1 point for recognizing the differences between the observed and simulated distribution for $D$ (simulated pdf is smoother, empirical pdf has more kinks/modes, observed has higher mode etc.)
     1 point for recognizing that there is a relationship in the observations that the simulation does not capture
     1 point for making reasonable suggestions for improvements (capturing the dependency, truncating unphysical values, etc.)
-    (half points for slight deviations)
+    (half points for slight deviations or imperfect answers)
  
 % solution_end
 
