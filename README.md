@@ -11,13 +11,13 @@ GA 1.4 focuses on the fit and validation of a continuous parametric probability 
 There are several files to be aware of:
 
 1. `README.md`
-2. 3 subdirectories containing the files for each of the 3 data sets, containing the "usual" files (`Analysis.ipynb`, `Report.md` and `*.csv`)
+2. 3 subdirectories containing the files for each of the 3 data sets, containing the "usual" files (`Analysis.ipynb`and `Report.md`)
 
 First, you should **choose a dataset** to use for GA 1.4. The analysis is identical for each set, so choose that which aligns best with the interests of your group, as the context of the application may help with the interpretation of your results.
 
-1. `01 Wind gusts`: Compute the wind gust factor in Delft
-1. `02 Traffic`: Compute the traffic density at a highway near Helsinki
-3. `03 river flow velocity`: Compute the flow velocity of the river Thames
+1. `01_wind_gusts`: Compute the wind gust factor in Delft
+1. `02_traffic`: Compute the traffic density at a highway near Helsinki
+3. `03_river_flow_velocity`: Compute the flow velocity of the river Thames
 
 Note that the notebook lists specific distribution that you should choose from, which are unique for each data set; **read the notebook to see which distributions you should choose from!**
 
