@@ -84,7 +84,7 @@ _Include your figure here. Be sure to use high contrast data symbols/colors and 
 
 - In the PDF plot, we can see significant differences in the observed and simulated distributions for $F$. The observed distribution is much narrower, and has wind gust factors that start at and go into the tens. By contrast, the simulated distribution for includes values below $1$, which should not be possible: the gust speed cannot be lower than the wind speed, so we should always have $F \leq 1$.
 - Similarly, we can see in both the PDF and CDF plots that the simulated wind gust factors are dramatically larger than the observed ones. This includes unrealistically large factors, some even reaching beyond 100, which seems scarcely physically possible.
-- As may be expected, the observations are focussed along a thin band, indicating strong positive correlation. By contrast, the simualtions are spread much more broadly, freely combining wind and gust speeds of different velocities. This is a consequence of the assumption of independence in the simulations. </li>
+- As may be expected, the observations are focussed along a thin band, indicating strong positive correlation. By contrast, the simulations are spread much more broadly, freely combining wind and gust speeds of different velocities. This is a consequence of the assumption of independence in the simulations. </li>
 - <b>Some suggestions:</b> The fit got $v$ was already excellent, and also choosing a lognormal distribution for $G$ might yield better results (we limited ourselves to a beta distribution here for the sake of the exercise). Accounting for the dependence between the two variables is an absolute must. 
 
 % solution_end
