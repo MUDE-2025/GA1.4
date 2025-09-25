@@ -22,7 +22,7 @@ First, you should **choose a dataset** to use for GA 1.4. The analysis is identi
 Note that the notebook lists specific distribution that you should choose from, which are unique for each data set; **read the notebook to see which distributions you should choose from!**
 
 As in previous weeks:
-- complete the analysis in `Analysis.ipynb` then answer the questions in `Report.md` (but some group members can start working on the Report in parallel!).
+- Complete the analysis in `Analysis.ipynb` then answer the questions in `Report.md` (but some group members can start working on the Report in parallel!).
 - Markdown cells in the notebook are primarily for your own benefit; answers in the Report are more important. 
 
 When **submitting your assignment** make sure your `Analysis.ipynb` and `Report.md` files are in the root directory of the repository (i.e., in the same folder as this README file).
