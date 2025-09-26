@@ -1,8 +1,4 @@
-# Report for Group Assignment 1.4, Wind Gust Dataset
-
-*[CEGM1000 MUDE](http://mude.citg.tudelft.nl/): Week 1.4, Friday, Sept 26th, 2025.*
-
-_Remember to read the grading and submission instructions in the `README.md` file thoroughly before finalizing your answers in this document!_
+# Report wind gusts dataset
 
 ## Questions
 
@@ -22,7 +18,7 @@ _Your justification here._
 
 % solution_start
 
-- Both variables have similar means (with the mean of $G$ being naturally larger) but different variances. To compare the variability of variables with different magnitudes, it can be useful to compute the <b>coefficient of variation</b>, which normalizes the standard deviation against the mean. If we do so, we obtain $CV(v)=\sigma/\mu=\sqrt{1.990}/2.832 = 0.498$ and $CV(G)=\sigma/\mu= \sqrt{10.185}/6.539 = 0.488$. Thus, we can see that $v$ and $G$ have approximately similar variability.
+- Both variables have similar means (with the mean of $G$ being naturally larger) but different variances. To compare the variability of variables with different magnitudes, it can be useful to compute the **coefficient of variation**, which normalizes the standard deviation against the mean. If we do so, we obtain $CV(v)=\sigma/\mu=\sqrt{1.990}/2.832 = 0.498$ and $CV(G)=\sigma/\mu= \sqrt{10.185}/6.539 = 0.488$. Thus, we can see that $v$ and $G$ have approximately similar variability.
 - Both $v$ and $G$ have a positive non-zero skewness, but the one for $v$ is a bit higher. Thus, the data presents a right tail and mode < median < mean. An appropriate distribution for $H$ and $G$ would be one which: (1) is bounded in 0 (no negative values of $H$ or $T$ are physically possible), and (2) has a positive tail. If we consider the distributions that you have been introduced to, the Lognormal, Gumbel, beta, or Exponential distributions would be possibilities.
 
 $v$: lognormal - Reasoning: both distributions have a right tail and a left bound, but the mode of the PDF is not at the left bound. Hence lognormal.
@@ -84,8 +80,8 @@ _Include your figure here. Be sure to use high contrast data symbols/colors and 
 
 - In the PDF plot, we can see significant differences in the observed and simulated distributions for $F$. The observed distribution is much narrower, and has wind gust factors that start at and go into the tens. By contrast, the simulated distribution for includes values below $1$, which should not be possible: the gust speed cannot be lower than the wind speed, so we should always have $F \leq 1$.
 - Similarly, we can see in both the PDF and CDF plots that the simulated wind gust factors are dramatically larger than the observed ones. This includes unrealistically large factors, some even reaching beyond 100, which seems scarcely physically possible.
-- As may be expected, the observations are focussed along a thin band, indicating strong positive correlation. By contrast, the simulations are spread much more broadly, freely combining wind and gust speeds of different velocities. This is a consequence of the assumption of independence in the simulations. </li>
-- <b>Some suggestions:</b> The fit got $v$ was already excellent, and also choosing a lognormal distribution for $G$ might yield better results (we limited ourselves to a beta distribution here for the sake of the exercise). Accounting for the dependence between the two variables is an absolute must. 
+- As may be expected, the observations are focussed along a thin band, indicating strong positive correlation. By contrast, the simulations are spread much more broadly, freely combining wind and gust speeds of different velocities. This is a consequence of the assumption of independence in the simulations.
+- **Some suggestions:** The fit got $v$ was already excellent, and also choosing a lognormal distribution for $G$ might yield better results (we limited ourselves to a beta distribution here for the sake of the exercise). Accounting for the dependence between the two variables is an absolute must. 
 
 % solution_end
 
@@ -106,7 +102,4 @@ Rubric: - 3 points in total
 
 _Use this space to let us know if you ran into any challenges while working on this GA, and if you have any feedback to report._
 
-**End of file.**
-
-<span style="font-size: 75%">
-*Copyright 2025 <a rel="MUDE" href="http://mude.citg.tudelft.nl/">MUDE</a>, TU Delft. This work is licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.*
+> By Max Ramgraber, Patricia Mares Nasarre and Robert Lanzafame, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).

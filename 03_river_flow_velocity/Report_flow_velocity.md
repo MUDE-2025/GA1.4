@@ -1,8 +1,4 @@
-# Report for Group Assignment 1.4, Flow velocity Dataset
-
-*[CEGM1000 MUDE](http://mude.citg.tudelft.nl/): Week 1.4, Friday, Sept 26th, 2025.*
-
-_Remember to read the grading and submission instructions in the `README.md` file thoroughly before finalizing your answers in this document!_
+# Report flow velocity dataset
 
 ## Questions
 
@@ -22,7 +18,7 @@ _Your justification here._
 
 % solution_start
 
-- $h$ and $q$ have a similar mean, but $h$ has significantly lower variance. To compare the variability of variables with different magnitudes, it can be useful to compute the <b>coefficient of variation</b>, which normalizes the standard deviation against the mean. If we do so, we obtain $CV(h)=\sigma/\mu=\sqrt{0.000539}/3.402 = 0.007$ and $CV(q)=\sigma/\mu= \sqrt{6.718}/8.657 = 0.299$. Thus, $q$ has significantly higher variability than $h$.
+- $h$ and $q$ have a similar mean, but $h$ has significantly lower variance. To compare the variability of variables with different magnitudes, it can be useful to compute the **coefficient of variation**, which normalizes the standard deviation against the mean. If we do so, we obtain $CV(h)=\sigma/\mu=\sqrt{0.000539}/3.402 = 0.007$ and $CV(q)=\sigma/\mu= \sqrt{6.718}/8.657 = 0.299$. Thus, $q$ has significantly higher variability than $h$.
 - Both $h$ and $q$ have a positive non-zero skewness, with the one for $q$ being significantly higher. Thus, the data presents a right tail and mode < median < mean. An appropriate distribution for $h$ and $q$ would be one which: (1) it is bounded in 0 (no negative values of $h$ or $q$ are physically possible), and (2) has a positive tail. If we consider the distributions that you have been introduced to, Lognormal, Gumbel or Exponential distributions would be a possibility.
 
 $h$: Lognormal - Reasoning: This distribution is clearly not uniform, and the positive skewness suggests we need a right-tailed distribution.
@@ -49,11 +45,9 @@ _Remember to use quantitative information based on the goodness of fit metrics t
 
 % solution_start
 
-- <b>Logscale plot</b>: This technique allows to visually assess the fitting of the parametric distribution to the tail of the empirical distribution. For $h$ and $q$, the lognormal and Gumbel distribution does not agree with the empirical distribution in the right tail very well. In both cases, high values start to slightly deviate from the empirical distribution, indicating that for lower non-exceedance probabilities it might not be a good fit. </li>
-- <b>QQ plot</b>: Similar conclusions to those for Logscale can be derived. Here, we can also see that both distributions deviate slightly in the left tail, too.
-- <b>Kolmogorov-Smirnov test</b>: remember that the test statistic measures the difference between two distributions. The p-value then represents the probability of observing a difference at least that large for a sample from the assumed distribution. If p-value is lower than the significance ($\alpha=0.05$, for instance), the null hypothesis is rejected. Considering here $\alpha=0.05$, we can reject the hypothesis that the variable $h$ comes from a lognormal distribution and that $q$ comes from a Gumbel distribution.
-
-% solution_end
+- **Logscale plot**: This technique allows to visually assess the fitting of the parametric distribution to the tail of the empirical distribution. For $h$ and $q$, the lognormal and Gumbel distribution does not agree with the empirical distribution in the right tail very well. In both cases, high values start to slightly deviate from the empirical distribution, indicating that for lower non-exceedance probabilities it might not be a good fit.
+- **QQ plot**: Similar conclusions to those for Logscale can be derived. Here, we can also see that both distributions deviate slightly in the left tail, too.
+- **Kolmogorov-Smirnov test**: remember that the test statistic measures the difference between two distributions. The p-value then represents the probability of observing a difference at least that large for a sample from the assumed distribution. If p-value is lower than the significance ($\alpha=0.05$, for instance), the null hypothesis is rejected. Considering here $\alpha=0.05$, we can reject the hypothesis that the variable $h$ comes from a lognormal distribution and that $q$ comes from a Gumbel distribution.
 
 % solution_start
 
@@ -83,10 +77,10 @@ _Include your figure here. Be sure to use high contrast data symbols/colors and 
 % solution_start
 
 - In the PDF plot, we can see that the shape of the distribution is similar for $u$. In the CDF plot, we can see that there are significant differences in the tail of the distribution of $u$. Specifically, the values from the observations are lower than those computed from the simulations. This is because the both distributions overestimated the exceedance probability in the right tails, also leading to larger predictions of the flow velocity.
-- <b>Disadvantages:</b> we are assuming that $h$ and $q$ are independent (we will see how to address this issue next week). But is that true? Also, the results are conditioned to how good model is the selected parametric distribution. In this case, since the tail of the distribution of $h$ is not properly fitted, the obtained distribution for $u$ deviates from the one obtained from the observations.
-- <b>Advantages:</b> I can draw all the samples I want allowing the computation of events I have not observed yet (extreme events).
+- **Disadvantages:** we are assuming that $h$ and $q$ are independent (we will see how to address this issue next week). But is that true? Also, the results are conditioned to how good model is the selected parametric distribution. In this case, since the tail of the distribution of $h$ is not properly fitted, the obtained distribution for $u$ deviates from the one obtained from the observations.
+- **Advantages:** I can draw all the samples I want allowing the computation of events I have not observed yet (extreme events).
 - The observations along a narrow drop-shaped area of the plot, whereas the simulations are spread all around. This is because the observations are dependent, since there is a physical relationship between the water depth and the velocity of the flow, while the simulations were assumed to be independent.
-- <b>Some suggestions:</b> Improve the fit in the tail for $h$ and $q$. Account for the dependence between the two variables.
+- **Some suggestions:** Improve the fit in the tail for $h$ and $q$. Account for the dependence between the two variables.
 
 % solution_end
 
@@ -104,7 +98,4 @@ Rubric: - 3 points in total
 
 _Use this space to let us know if you ran into any challenges while working on this GA, and if you have any feedback to report._
 
-**End of file.**
-
-<span style="font-size: 75%">
-*Copyright 2025 <a rel="MUDE" href="http://mude.citg.tudelft.nl/">MUDE</a>, TU Delft. This work is licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.*
+> By Max Ramgraber, Patricia Mares Nasarre and Robert Lanzafame, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).
