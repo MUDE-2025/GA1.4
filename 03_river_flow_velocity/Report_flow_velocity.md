@@ -31,7 +31,7 @@ $q$: Gumbel - Reasoning: This distribution has a clear right tail, so a symmetri
 
 Rubric: - 3 points in total
 
-    1 point for recognizing that $q$ has a higher variability than $h$
+    1 point for describing and/or comparing the statistical features of the distributions in a reasonable way (e.g., commenting on similarities or differences in skewness, variability, etc.)
     0.5 points for each correct distribution
     0.5 points for each correct justification
 
@@ -56,8 +56,9 @@ Rubric: - 3 points in total
     1 point for recognizing that both distributions have similarly good fits, but deviate in the tails (0.5 points for a convincing explanation that deviates from that) in the graphical logscale or QQ plot
     0.5 points for the correct KS p-value for $F$ (0.0) or for the correct computation if they chose a different pdf 
     0.5 points for the correct KS p-value for $v$ (0.0) or for the correct computation if they chose a different pdf
-    0.5 points for the correct interpretation of the KS results for $F$: we can reject H_0
-    0.5 points for the correct interpretation of the KS results for $v$: we can reject H_0
+    0.5 points for the correct interpretation of the KS p-value for $F$: we can reject H_0
+    0.5 points for the correct interpretation of the KS p-value for $v$: we can reject H_0
+    (also full points on the last two items if the interpreted wrong KS-values correctly)
  
 % solution_end
 
