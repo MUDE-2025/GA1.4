@@ -21,7 +21,7 @@ _Your justification here._
 - $F$ features a higher mean but also a significantly higher variance. To compare the variability of variables with different magnitudes, it can be useful to compute the **coefficient of variation**, which normalizes the standard deviation against the mean. If we do so, we obtain $CV(F)=\sigma/\mu=\sqrt{531318.298}/923.655 = 0.789$ and $CV(v)=\sigma/\mu = \sqrt{6.839}/80.140 = 0.033$. Thus, $F$ has far higher variability than $v$.
 - $F$ has a weak positive skewness, and $v$ has negative skewness. An appropriate distribution for $F$ might be one that features a right tail, such as a right-tailed Gumbel, beta, exponential, or lognormal distribution. For $v$, we might want to consider a left-tailed distribution, for example a beta or left-tailed Gumbel distribution.
 
-$F$: exponential, although any fit is horrible. Perkele. - Reason: the distribution has strong positive skewness, indicating a right tail, and mean of the distribution is very close to the left bound.
+$F$: exponential, although any fit is horrible. Perkele. - Reason: the distribution has strong positive skewness, indicating a right tail, and mode of the distribution is very close to the left bound.
 
 $v$: left-tailed Gumbel - Reason: the distribution has a negative skewness, so a symmetric distribution like a Gaussian would not be a good fit. The left-tailed Gumbel distribution fits our needs better.
 
@@ -31,7 +31,7 @@ $v$: left-tailed Gumbel - Reason: the distribution has a negative skewness, so a
 
 Rubric: - 3 points in total
 
-    1 point for recognizing that $F$ has a higher variability than $v$
+    1 point for describing and/or comparing the statistical features of the distributions in a reasonable way (e.g., commenting on similarities or differences in skewness, variability, etc.)
     0.5 points for each correct distribution
     0.5 points for each correct justification
 
@@ -58,8 +58,9 @@ Rubric: - 3 points in total
     1 point for recognizing that neither distribution fits the tail very well (0.5 points for a convincing explanation that deviates from that) in the graphical logscale or QQ plot
     0.5 points for the correct KS p-value for $F$ (0.0) or for the correct computation if they chose a different pdf 
     0.5 points for the correct KS p-value for $v$ (0.102) or for the correct computation if they chose a different pdf
-    0.5 points for the correct interpretation of the KS results for $F$: we can reject H_0
-    0.5 points for the correct interpretation of the KS results for $v$: we cannot reject H_0
+    0.5 points for the correct interpretation of the KS p-value for $F$: we can reject H_0
+    0.5 points for the correct interpretation of the KS p-value for $v$: we cannot reject H_0
+    (also full points on the last two items if the interpreted wrong KS-values correctly)
  
 % solution_end
 
