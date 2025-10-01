@@ -1,4 +1,4 @@
-# Report for Group Assignment 1.4, Flow velocity Dataset
+# Report Flow velocity Dataset
 
 *[CEGM1000 MUDE](http://mude.citg.tudelft.nl/): Week 1.4, Friday, Sept 26th, 2025.*
 
