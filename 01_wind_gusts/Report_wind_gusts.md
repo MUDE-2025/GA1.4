@@ -1,4 +1,4 @@
-# Report wind gusts dataset
+# Report Wind Gusts Dataset
 
 ## Questions
 
