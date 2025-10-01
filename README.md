@@ -1,10 +1,6 @@
 # Group assignment 1.4
 
-*[CEGM1000 MUDE](http://mude.citg.tudelft.nl/)*
-
-*Written by: Patricia Mares Nasarre, Robert Lanzafame, and Max Ramgraber.*
-
-*Due: Friday, September 26th 2025.*
+*Due: Friday, September 26th 2025. 12:30*
 
 GA 1.4 focuses on the fit and validation of a continuous parametric probability distribution to two data sets. There are **three datasets to choose from** (the analysis is exactly the same for all three!).
 
@@ -39,5 +35,3 @@ Many of the tasks in the notebook, as well as some of the Report, can be complet
 If you are short on time, remember that it is more important to have answers in the Report than a completed notebook. Explain any issues you faced with the programming in your Report.
 
 > By Max Ramgraber, Patricia Mares Nasarre and Robert Lanzafame, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).
-
-**End of file.**
