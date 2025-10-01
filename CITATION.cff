@@ -1,8 +1,11 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
 message: 'If you use this assignment, please cite it using these metadata.'
 authors:
   - name: Delft University of Technology
-title: 'MUDE assignment 2025-2026: GA 1.4'
+title: 'MUDE assignment 2025-2026: WS 1.4'
 preferred-citation:
   type: generic
   authors:
@@ -13,8 +16,8 @@ preferred-citation:
   - family-names: Lanzafame
     given-names: Robert
   - name: Delft University of Technology
-  url: 'https://github.com/MUDE-2025/GA1.4' 
-  title: 'MUDE assignment 2025-2026: GA 1.4'
+  url: 'https://github.com/MUDE-2025/WS1.4' 
+  title: 'MUDE assignment 2025-2026: WS 1.4'
   license: CC-BY-4.0
   license-url: 'https://creativecommons.org/licenses/by/4.0/'
   languages:
