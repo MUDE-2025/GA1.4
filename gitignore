@@ -1,1 +1,6 @@
-**/*.csv
+01_wind_gusts/dataset_wind_gusts.csv
+01_wind_gusts/scatterplot.png
+02_traffic/dataset_traffic.csv
+02_traffic/scatterplot.png
+03_river_flow_velocity/dataset_thames.csv
+03_river_flow_velocity/scatterplot.png
