@@ -2,7 +2,7 @@
 
 *Due: Friday, September 26th 2025. 12:30*
 
-You can preview this assignment on https://mude.citg.tudelft.nl/workbook-2025/assignments/GA1.4/README.html. After the deadline, this link will include solutions. The preview of the assignment version is shared here: https://mude.citg.tudelft.nl/workbook-2025/no_solutions/assignments/GA1.4/README.html. Pages can be downloaded as `.md` and `.ipynb` files to your computer. You can obtain your personal repository for submission on: https://classroom.github.com/a/ZKXj-OaS
+You can preview this assignment on https://mude.citg.tudelft.nl/workbook-2025/assignments/GA1.4/README.html. After the deadline, this link will include solutions. The preview of the assignment version is shared here: https://mude.citg.tudelft.nl/workbook-2025/no_solutions/assignments/GA1.4/README.html. Pages can be downloaded as `.md` and `.ipynb` files to your computer. You can obtain your personal repository for submission on: https://classroom.github.com/a/ZKXj-OaS. If you don't want to make this assignment as part of a grade, access the assignment here: https://github.com/MUDE-2025/GA1.4.
 
 GA 1.4 focuses on the fit and validation of a continuous parametric probability distribution to two data sets. There are **three datasets to choose from** (the analysis is exactly the same for all three!).
 
